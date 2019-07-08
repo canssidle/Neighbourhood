@@ -11,9 +11,9 @@
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
       <a href="{% url 'notifications'%}">
       <div class="card" style="width: 34rem;height:28rem;">
-        <img class="card-img-top dark" src="{% static 'img/hood.jpeg'%}" style="width:34rem;height:28rem;">
+        <img class='me' class="card-img-top dark" src="{% static 'img/notify.png'%}" style="width:34rem;height:28rem;">
         <div class="centered">
-          <h4 style="color:white; font-size:30px;">Notifications</h4>
+          <h4 style="color:white; font-size:30px;"></h4>
         </div>
       </div>
     </a>
@@ -21,9 +21,9 @@
     <div class=" col-xs-12 col-sm-12 col-md-6 col-lg-6">
       <a href="{% url 'blog'%}">
       <div class="card" style="width: 34rem;height:28rem;">
-        <img class="card-img-top dark" src="{% static 'img/nei4.jpeg'%}" style="width:34rem;height:28rem;">
+        <img class='me' class="card-img-top dark" src="{% static 'img/blog.jpeg'%}" style="width:34rem;height:28rem;">
         <div class="centered">
-          <h4 style="color:white; font-size:30px;">Blog Posts</h4>
+          <h4 style="color:white; font-size:30px;"></h4>
         </div>
       </div>
       </a>
@@ -33,7 +33,7 @@
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <a href="{% url 'health'%}">
       <div class="card" style="width: 22.5rem;height:15rem;">
-        <img class="card-img-top dark" src="{% static 'img/nei1.jpeg'%}" style="width:34rem;height:28rem;">
+        <img class='me' class="card-img-top dark" src="{% static 'img/clinic.jpeg'%}" style="width:34rem;height:28rem;">
         <div class="centered">
           <h4 style="color:white; font-size:30px;">Health Services</h4>
         </div>
@@ -43,9 +43,9 @@
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <a href="{% url 'authorities'%}">
       <div class="card" style="width: 22.5rem;height:15rem;">
-        <img class="card-img-top dark" src="{% static 'img/nei2.jpeg'%}" style="width:34rem;height:28rem;">
+        <img class='me' class="card-img-top dark" src="{% static 'img/authority.jpeg'%}" style="width:34rem;height:28rem;">
         <div class="centered">
-          <h4 style="color:white; font-size:30px;">Authorities</h4>
+          <h4 style="color:white; font-size:30px;"></h4>
         </div>
       </div>
     </a>
@@ -53,9 +53,9 @@
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <a href="{% url 'businesses'%}">
       <div class="card" style="width: 22.5rem;height:15rem;">
-        <img class="card-img-top dark" src="{% static 'img/businesses.jpg'%}" style="width:34rem;height:28rem;">
+        <img class='me' class="card-img-top dark" src="{% static 'img/bus1.jpeg'%}" style="width:34rem;height:28rem;">
         <div class="centered">
-          <h4 style="color:white; font-size:30px;">Businesses</h4>
+          <h4 style="color:white; font-size:30px;"></h4>
         </div>
       </div>
     </a>
@@ -101,6 +101,9 @@
   padding-left: 0;
   padding-right: 0;
 
+}
+.me{
+  border-radius: 50%;
 }
 
 </style>
