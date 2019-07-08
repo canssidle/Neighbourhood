@@ -16,10 +16,10 @@ class BlogPostForm(forms.ModelForm):
         model=BlogPost
         exclude=['username','neighbourhood','avatar']
 
-# class BusinessForm(forms.ModelForm):
-#     class Meta:
-#         model=Business
-#         exclude=['owner','neighbourhood']
+class BusinessForm(forms.ModelForm):
+    class Meta:
+        model=Business
+        exclude=['owner','neighbourhood']
 
 # class CommentForm(forms.ModelForm):
 #     class Meta:
