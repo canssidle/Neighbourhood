@@ -6,10 +6,10 @@ class notificationsForm(forms.ModelForm):
         model=notifications
         exclude=['author','neighbourhood','post_date']
 
-# class ProfileForm(forms.ModelForm):
-#     class Meta:
-#         model=Profile
-#         exclude=['username']
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model=Profile
+        exclude=['username']
 
 # class BlogPostForm(forms.ModelForm):
 #     class Meta:
