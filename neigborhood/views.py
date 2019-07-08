@@ -27,13 +27,13 @@ def index(request):
 
     return render(request,'index.html')
 
-# @login_required(login_url='/accounts/login/')
-# def notification(request):
-#     current_user=request.user
-#     profile=Profile.objects.get(username=current_user)
-#     all_notifications = notifications.objects.filter(neighbourhood=profile.neighbourhood)
+@login_required(login_url='/accounts/login/')
+def notification(request):
+    current_user=request.user
+    profile=Profile.objects.get(username=current_user)
+    all_notifications = notifications.objects.filter(neighbourhood=profile.neighbourhood)
 
-#     return render(request,'notifications.html',{"notifications":all_notifications})
+    return render(request,'notifications.html',{"notifications":all_notifications})
 
 # @login_required(login_url='/accounts/login/')
 # def blog(request):
