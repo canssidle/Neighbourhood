@@ -1,27 +1,27 @@
-# from django.test import TestCase
-# from .models import neighbourhood,healthservices
-# from django.contrib.auth.models import User
-# import datetime as dt
+from django.test import TestCase
+from .models import neighbourhood,healthservices
+from django.contrib.auth.models import User
+import datetime as dt
 
-# class neighbourhoodTestClass(TestCase):
-#     def setUp(self):
-#         self.Kahawa = neighbourhood(neighbourhood='Kahawa')
+class neighbourhoodTestClass(TestCase):
+    def setUp(self):
+        self.Kahawa = neighbourhood(neighbourhood='Kahawa')
 
-#     def test_instance(self):
-#         self.assertTrue(isinstance(self.Kahawa,neighbourhood))
+    def test_instance(self):
+        self.assertTrue(isinstance(self.Kahawa,neighbourhood))
 
-#     def tearDown(self):
-#         neighbourhood.objects.all().delete()
+    def tearDown(self):
+        neighbourhood.objects.all().delete()
 
-#     def test_save_method(self):
-#         self.Kahawa.save_neighbourhood()
-#         hood = neighbourhood.objects.all()
-#         self.assertTrue(len(hood)>0)
+    def test_save_method(self):
+        self.Kahawa.save_neighbourhood()
+        hood = neighbourhood.objects.all()
+        self.assertTrue(len(hood)>0)
 
-#     def test_delete_method(self):
-#         self.Kahawa.delete_neighbourhood('Kahawa')
-#         hood = neighbourhood.objects.all()
-#         self.assertTrue(len(hood)==0)
+    def test_delete_method(self):
+        self.Kahawa.delete_neighbourhood('Kahawa')
+        hood = neighbourhood.objects.all()
+        self.assertTrue(len(hood)==0)
 
 # class healthservicesTestClass(TestCase):
 #     def setUp(self):
