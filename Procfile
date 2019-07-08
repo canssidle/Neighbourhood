@@ -1,1 +1,1 @@
-web: gunicorn neibors.wsgi --log-file -
+web: gunicorn neigbors.wsgi --log-file -

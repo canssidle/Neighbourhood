@@ -25,7 +25,7 @@ Not identified any but the user is welcome to view and identify if any.
 
 ## Technologies used
  - Python3.6 - Programming language
- - Django - Django framework
+ - Django - Python framework
  - Git - Version control
  - Visual Studio - Code editor
  - Postgresql
