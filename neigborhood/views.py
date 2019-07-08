@@ -67,27 +67,27 @@ def businesses(request):
 
     return render(request,'business.html',{"businesses":businesses})
 
-# @login_required(login_url='/accounts/login/')
-# def view_blog(request,id):
-#     current_user = request.user
+@login_required(login_url='/accounts/login/')
+def view_blog(request,id):
+    current_user = request.user
 
-#     try:
-#         comments = Comment.objects.filter(post_id=id)
-#     except:
-#         comments =[]
+    try:
+        comments = Comment.objects.filter(post_id=id)
+    except:
+        comments =[]
 
-#     blog = BlogPost.objects.get(id=id)
-#     if request.method =='POST':
-#         form = CommentForm(request.POST,request.FILES)
-#         if form.is_valid():
-#             comment = form.save(commit=False)
-#             comment.username = current_user
-#             comment.post = blog
-#             comment.save()
-#     else:
-#         form = CommentForm()
+    blog = BlogPost.objects.get(id=id)
+    if request.method =='POST':
+        form = CommentForm(request.POST,request.FILES)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.username = current_user
+            comment.post = blog
+            comment.save()
+    else:
+        form = CommentForm()
 
-#     return render(request,'view_blog.html',{"blog":blog,"form":form,"comments":comments})
+    return render(request,'view_blog.html',{"blog":blog,"form":form,"comments":comments})
 
 # @login_required(login_url='/accounts/login/')
 # def my_profile(request):
