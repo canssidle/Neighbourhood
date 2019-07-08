@@ -23,22 +23,22 @@ class neighbourhoodTestClass(TestCase):
         hood = neighbourhood.objects.all()
         self.assertTrue(len(hood)==0)
 
-# class healthservicesTestClass(TestCase):
-#     def setUp(self):
-#         self.Radiotherapy = healthservices(healthservices='Radiotherapy')
+class healthservicesTestClass(TestCase):
+    def setUp(self):
+        self.Radiotherapy = healthservices(healthservices='Radiotherapy')
 
-#     def test_instance(self):
-#         self.assertTrue(isinstance(self.Radiotherapy,healthservices))
+    def test_instance(self):
+        self.assertTrue(isinstance(self.Radiotherapy,healthservices))
 
-#     def tearDown(self):
-#         healthservices.objects.all().delete()
+    def tearDown(self):
+        healthservices.objects.all().delete()
 
-#     def test_save_method(self):
-#         self.Radiotherapy.save_healthservices()
-#         health = healthservices.objects.all()
-#         self.assertTrue(len(health)>0)
+    def test_save_method(self):
+        self.Radiotherapy.save_healthservices()
+        health = healthservices.objects.all()
+        self.assertTrue(len(health)>0)
 
-#     def test_delete_method(self):
-#         self.Radiotherapy.delete_healthservices('Radiotherapy')
-#         health = healthservices.objects.all()
-#         self.assertTrue(len(health)==0)
+    def test_delete_method(self):
+        self.Radiotherapy.delete_healthservices('Radiotherapy')
+        health = healthservices.objects.all()
+        self.assertTrue(len(health)==0)
