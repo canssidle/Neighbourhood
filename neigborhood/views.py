@@ -162,29 +162,29 @@ def create_profile(request):
         form = ProfileForm()
     return render(request,'profile_form.html',{"form":form})
 
-# @login_required(login_url='/accounts/login/')
-# def new_notification(request):
-#     current_user=request.user
-#     profile =Profile.objects.get(username=current_user)
+@login_required(login_url='/accounts/login/')
+def new_notification(request):
+    current_user=request.user
+    profile =Profile.objects.get(username=current_user)
 
-#     if request.method=="POST":
-#         form =notificationsForm(request.POST,request.FILES)
-#         if form.is_valid():
-#             notification = form.save(commit = False)
-#             notification.author = current_user
-#             notification.neighbourhood = profile.neighbourhood
-#             notification.save()
+    if request.method=="POST":
+        form =notificationsForm(request.POST,request.FILES)
+        if form.is_valid():
+            notification = form.save(commit = False)
+            notification.author = current_user
+            notification.neighbourhood = profile.neighbourhood
+            notification.save()
 
-#             if notification.priority == 'High Priority':
-#                 send_priority_email(profile.name,profile.email,notification.title,notification.notification,notification.author,notification.neighbourhood)
+            if notification.priority == 'High Priority':
+                send_priority_email(profile.name,profile.email,notification.title,notification.notification,notification.author,notification.neighbourhood)
 
-#         return HttpResponseRedirect('/notifications')
+        return HttpResponseRedirect('/notifications')
 
 
-#     else:
-#         form = notificationsForm()
+    else:
+        form = notificationsForm()
 
-#     return render(request,'notification_form.html',{"form":form})
+    return render(request,'notification_form.html',{"form":form})
 
 # @login_required(login_url='/accounts/login/')
 # def update_profile(request):
